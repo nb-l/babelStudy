@@ -19,5 +19,5 @@ const fn = () => 1;
 
 new Promise();
 
-// let m = '   dwdwd    ';
-// console.log(m.trimStart())
+let m = '   dwdwd    ';
+console.log(m.trimStart())

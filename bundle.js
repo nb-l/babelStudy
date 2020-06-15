@@ -2,6 +2,8 @@
 
 var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
+var _trimStart = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/trim-start"));
+
 var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
 
 var _assign = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/assign"));
@@ -41,5 +43,6 @@ var fn = function fn() {
   return 1;
 };
 
-new _promise["default"](); // let m = '   dwdwd    ';
-// console.log(m.trimStart())
+new _promise["default"]();
+var m = '   dwdwd    ';
+console.log((0, _trimStart["default"])(m).call(m));
