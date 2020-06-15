@@ -1,44 +1,38 @@
 "use strict";
 
-require("core-js/modules/es6.promise");
+var _interopRequireDefault = require("@babel/runtime-corejs3/helpers/interopRequireDefault");
 
-require("core-js/modules/es6.object.to-string");
+var _promise = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/promise"));
 
-require("core-js/modules/es6.object.assign");
+var _assign = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/object/assign"));
 
-require("core-js/modules/es6.object.define-property");
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/classCallCheck"));
 
-require("core-js/modules/es7.array.includes");
+var _createClass2 = _interopRequireDefault(require("@babel/runtime-corejs3/helpers/createClass"));
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+var _includes = _interopRequireDefault(require("@babel/runtime-corejs3/core-js-stable/instance/includes"));
 
 var array = [1, 2, 3, 4, 5, 6];
-array.includes(function (item) {
+(0, _includes["default"])(array).call(array, function (item) {
   return item > 2;
 });
 
 var Robot = /*#__PURE__*/function () {
   function Robot(msg) {
-    _classCallCheck(this, Robot);
-
+    (0, _classCallCheck2["default"])(this, Robot);
     this.message = msg;
   }
 
-  _createClass(Robot, [{
+  (0, _createClass2["default"])(Robot, [{
     key: "say",
     value: function say() {
       alertMe(this.message);
     }
   }]);
-
   return Robot;
 }();
 
-Object.assign({}, {
+(0, _assign["default"])({}, {
   a: 1,
   b: 2
 });
@@ -47,5 +41,5 @@ var fn = function fn() {
   return 1;
 };
 
-new Promise(); // let m = '   dwdwd    ';
+new _promise["default"](); // let m = '   dwdwd    ';
 // console.log(m.trimStart())
